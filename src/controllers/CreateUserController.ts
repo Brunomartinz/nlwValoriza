@@ -7,7 +7,7 @@ class CreateUserController {
         // desestruturação da requisição
         const { name, email, admin } = request.body;
 
-        const createUserService = new CreateUserService;
+        const createUserService = new CreateUserService();
 
         const user = await createUserService.execute({ name, email, admin })
 
